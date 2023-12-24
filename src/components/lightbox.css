@@ -32,13 +32,13 @@
 }
 .other-device .boxLight .close {
     position: absolute;
-    right:-25px;
-    top:-20px;
+    right:-15px;
+    top:-40px;
     cursor: pointer;
+    width:30px;
 }
-.other-device .boxLight .close:hover svg path {
+.other-device .boxLight .close:hover img {
     filter: invert(64%) sepia(27%) saturate(6927%) hue-rotate(345deg) brightness(104%) contrast(107%);
-
 }
 
 .other-device .boxLight .next {
@@ -103,21 +103,23 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 100%;
+            height: 100%;
         background-color: rgba(0, 0, 0, 0.829);
     }
     .boxLight .box {
         width: 430px;
     }
-    .close {
+    .close img {
         position: absolute;
-        right:0px;
-        top:-30px;
+        right:50%;
+        transform: translateX(50%);
+        top:-50px;
         width: 64px;
         cursor: pointer;
-        fill: hsl(26, 100%, 55%);
     }
-    
+    .close:hover img {
+        filter: invert(64%) sepia(27%) saturate(6927%) hue-rotate(345deg) brightness(104%) contrast(107%)
+    }
     .next {
         position: absolute;
         right:0px;
@@ -133,28 +135,23 @@
         border-radius: 50%;
         cursor: pointer;
     }
-     .next img {
-        width: 15px;
-    }
-    .previous {
+    .phone .previous {
         position: absolute;
-        left:0;
+        left: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
-        top:50%;
+        top: 50%;
         transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
-        background-color: white;
-        padding:13px;
-        border-radius: 50%;
-        cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 13px;
+    border-radius: 50%;
+    cursor: pointer;
     
     }
-     .boxLight .previous img {
-        width: 15px;
-    }
+
     
 }
 

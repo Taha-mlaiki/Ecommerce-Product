@@ -47,13 +47,7 @@ const LightBox = () => {
           <div className=" boxLight">
             <div className="box position-relative">
               <div className="close" onClick={() => setShowLight(false)}>
-                <svg width="0" height="15" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
-                    fill="#69707D"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                <img style={{width:"30px"}} src={close} alt="" />
               </div>
               {/* <img  className='close' onClick={()=>setShowLight(false)} src={close} alt="" /> */}
               {photo < imgs.length - 1 && (
@@ -61,7 +55,7 @@ const LightBox = () => {
                   onClick={() => setPhoto((prev) => prev + 1)}
                   className="next"
                 >
-                  <img src={next} alt="" />
+                  <img style={{width:"50px"}} src={next} alt="" />
                 </span>
               )}
               {photo > 0 && (
@@ -99,32 +93,14 @@ const LightBox = () => {
           <div className=" boxLight">
             <div className="box position-relative">
               <div className="close" onClick={() => setShowLight(false)}>
-                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
-                    fill="#69707D"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <img style={{width:"20px"}} src={close} alt="" />
               </div>
               {photo < imgs.length - 1 && (
                 <div
                   onClick={() => setPhoto((prev) => prev + 1)}
                   className="next"
                 >
-                  <svg
-                    width="13"
-                    height="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="m2 1 8 8-8 8"
-                      stroke="#1D2026"
-                      stroke-width="3"
-                      fill="none"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
+                  <img src={next} alt="" />
                 </div>
               )}
               {photo > 0 && (
@@ -132,19 +108,7 @@ const LightBox = () => {
                   onClick={() => setPhoto((prev) => prev - 1)}
                   className="previous"
                 >
-                  <svg
-                    width="12"
-                    height="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11 1 3 9l8 8"
-                      stroke="#1D2026"
-                      stroke-width="3"
-                      fill="none"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
+                 <img src={previous} alt="" />
                 </div>
               )}
               <div className="img">
