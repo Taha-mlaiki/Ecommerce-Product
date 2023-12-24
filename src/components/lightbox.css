@@ -1,0 +1,160 @@
+
+.other-device .box {
+    width: 380px;
+}
+.other-device .img img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.other-device .img-thumb img {
+    width: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.other-device .img-thumb img:hover {
+    outline:2px solid hsl(26, 100%, 55%);
+    color: white;
+}
+.other-device .boxLight{
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.829);
+}
+.other-device .boxLight .box {
+    width: 430px;
+}
+.other-device .boxLight .close {
+    position: absolute;
+    right:-25px;
+    top:-20px;
+    cursor: pointer;
+}
+.other-device .boxLight .close:hover svg path {
+    filter: invert(64%) sepia(27%) saturate(6927%) hue-rotate(345deg) brightness(104%) contrast(107%);
+
+}
+
+.other-device .boxLight .next {
+    position: absolute;
+    right:-20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:44%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding:13px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.boxLight .next:hover svg path {
+    filter: invert(64%) sepia(27%) saturate(6927%) hue-rotate(345deg) brightness(104%) contrast(107%);
+}
+
+.boxLight .previous {
+    position: absolute;
+    left:-20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:44%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding:13px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.boxLight .previous:hover svg path {
+    filter: invert(64%) sepia(27%) saturate(6927%) hue-rotate(345deg) brightness(104%) contrast(107%);
+}
+.phone {
+    display: none;
+}
+/* ----------------------  */
+      /* PHONES  */
+
+@media (max-width:768px) {
+    .other-device {
+        display: none;
+    }
+    .phone {
+        display: block;
+    }
+    .phone img {
+        width: 100%;
+    }
+    .phone .boxLight{
+        position: fixed;
+        top:0;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.829);
+    }
+    .boxLight .box {
+        width: 430px;
+    }
+    .close {
+        position: absolute;
+        right:0px;
+        top:-30px;
+        width: 64px;
+        cursor: pointer;
+        fill: hsl(26, 100%, 55%);
+    }
+    
+    .next {
+        position: absolute;
+        right:0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top:50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        padding:13px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+     .next img {
+        width: 15px;
+    }
+    .previous {
+        position: absolute;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top:50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        padding:13px;
+        border-radius: 50%;
+        cursor: pointer;
+    
+    }
+     .boxLight .previous img {
+        width: 15px;
+    }
+    
+}
+

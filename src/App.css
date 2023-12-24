@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.company {
+    font-size:14px;
+    font-weight: 700;
+    color:hsl(26, 100%, 55%);
+    margin-top:10px
+}
+.company + h1 {
+    font-size:50px;
+    font-weight: 700;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.company + h1 + p {
+    line-height: 1.8;
+    color: hsl(219, 9%, 45%);
+}
+.price h3 {
+    font-weight: 700;
+    margin:0;
+    
+}
+.price span {
+    width: 40px;
+    margin:0 20px;
+    background-color:  hsl(25, 100%, 94%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color:hsl(26, 100%, 55%);
+    font-size:14px;
+}
+.price + span {
+    font-weight: 700;
+    color:hsl(220, 14%, 75%);
+    font-size:15px;
+    text-decoration: line-through;
+}
+
+.counter {
+    width: 160px;
+    background-color: hsl(223, 64%, 98%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 1px 1px 20px hsl(223, 64%, 98%);
+    cursor: pointer;
+    font-weight: bold;
+}
+.counter img {
+    padding:15px
+}
+.add-cart {
+    padding:5px 0;
+    flex-grow: 1;
+    margin-left:20px;
+    border:none;
+    border-radius: 8px;
+    font-size:15px;
+    font-weight: 700;
+    color:white;
+    background-color: #ff7d1a;
+    box-shadow: 1px 15px 20px  hsl(25, 100%, 94%);
+}
+.add-cart:hover {
+    background-color: hsla(26, 100%, 55%, 0.445)
+}
+@media (max-width:768px) {
+    .add-cart {
+        margin: 14px 0;
+        padding:15px;
+        width: 100%;
+    }
+    .counter {
+        width: 100%;
+    }
+}
