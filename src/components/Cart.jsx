@@ -2,12 +2,12 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem } from '../cartSlice';
 
-const Cart = () => {
+const Cart = ({cartRef}) => {
   const itemCart = useSelector(state => state.cart ? state.cart : null);
   const dispatch = useDispatch();
 
   return (
-    <div className='cart-items'>
+    <div className='cart-items' ref={cartRef}>
       <h4 className='border-bottom py-3 px-2'>Cart</h4>
       {itemCart && itemCart.length > 0 ? (
         <div className="content">
@@ -19,6 +19,7 @@ const Cart = () => {
             </div>
             <i onClick={() => dispatch(removeItem())} className="fa-solid fa-trash mt-3 text-danger"></i>
           </div>
+          <button className='checkout'>Checkout</button>
         </div>
       ) : (
         <h3 className='text-center mt-5'>No item Added</h3>

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import image from "./assets/images/image-product-1-thumbnail.jpg"
 const cartSlice = createSlice({
     name:"cartSlice",
-    initialState:[{id:1,img:image,text:"Fall Limited Edition Sneakers",price:125,quantity:1}],
+    initialState:[],
     reducers:{
         addItem:(state,action)=>{
             

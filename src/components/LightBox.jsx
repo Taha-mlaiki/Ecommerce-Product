@@ -49,7 +49,6 @@ const LightBox = () => {
               <div className="close" onClick={() => setShowLight(false)}>
                 <img style={{width:"30px"}} src={close} alt="" />
               </div>
-              {/* <img  className='close' onClick={()=>setShowLight(false)} src={close} alt="" /> */}
               {photo < imgs.length - 1 && (
                 <span
                   onClick={() => setPhoto((prev) => prev + 1)}

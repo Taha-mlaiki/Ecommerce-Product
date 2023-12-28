@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import menu from "../assets/images/icon-menu.svg"
 import cart from "../assets/images/icon-cart.svg"
 import avatar from "../assets/images/image-avatar.png"
@@ -11,20 +11,20 @@ const Navbar = () => {
     const item = useSelector((state)=> state.cart);
 
     const [showCart,setShowCart] = useState(false);
+    const cartRef = useRef();
 
-    useEffect(() => {
-        const handleClickOutsideCart = (event) => {
-          if (!event.target.closest('.cart-logo')) {
-            setShowCart(false);
-          }
-        };
-    
-        document.addEventListener("click", handleClickOutsideCart);
-    
-        return () => {
-          document.removeEventListener("click", handleClickOutsideCart);
-        };
-      }, []);
+   useEffect(()=>{
+    const cartHundel = (e)=>{
+      if(cartRef && cartRef.current && !cartRef.current.contains(e.target)) {
+        setShowCart(false)
+      }
+      
+    }
+      document.addEventListener("mousedown",cartHundel)
+      return ()=>{
+        return document.removeEventListener("mousedown",cartHundel)
+      }
+   },[cartRef, setShowCart])
  
 
   return (
@@ -45,7 +45,7 @@ const Navbar = () => {
                 </div>
                 <img className='avatar ms-4' src={avatar} alt="" />
 
-                {showCart && <Cart />}
+                {showCart && <Cart cartRef={cartRef} />}
         </div>
         <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div className="offcanvas-header">
